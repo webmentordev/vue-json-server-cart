@@ -19,6 +19,14 @@ npm run build
 ```
 npm run lint
 ```
+### Start BackEnd Server
+```
+npm run back
+```
+### Start Tailwindcss
+```
+npm run watch
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
