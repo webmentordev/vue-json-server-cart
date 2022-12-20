@@ -11,6 +11,18 @@
       "price": 250,
       "id": 2,
       "product_image": "https://www.box.com.pk:8184/assets/product/HyMNDtKq6dlrHpD69LH76BeuS8o1Xq5o_1640862844929.jpg"
+    },
+    {
+      "name": "Coke Diet",
+      "price": 15,
+      "product_image": "https://www.rd.com/wp-content/uploads/2022/03/coke-zero-vs-diet-coke-via-coca-cola.com-via-diet-coke.com-UD.jpg",
+      "id": 3
+    },
+    {
+      "name": "Call Of Duty MW2",
+      "price": 69.99,
+      "product_image": "https://cdn.givemesport.com/wp-content/uploads/2022/05/Call-of-Duty-Modern-Warfare-2-Artwork.jpeg",
+      "id": 4
     }
   ],
   "cart": [
@@ -19,6 +31,12 @@
       "quantity": 1,
       "product_id": 1,
       "price": 1200
+    },
+    {
+      "quantity": 1,
+      "product_id": 4,
+      "price": 69.99,
+      "id": 2
     }
   ]
 }

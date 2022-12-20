@@ -1,6 +1,6 @@
 <template>
   <div class="h-[85vh] flex items-center justify-center">
-    <div class="p-6 bg-gray-100 rounded-lg max-w-lg w-full">
+    <div class="p-6 bg-gray-100 rounded-lg max-w-lg w-full shadow-md">
       <h1 class="text-2xl font-bold mb-2">Create Products</h1>
       <Alert :message="message" :success="success" :failed="failed" />
       <form @submit="create">
@@ -37,7 +37,7 @@ export default {
       async create(e){
         e.preventDefault();
         if(this.name != "" && this.price > 0 && typeof(this.price) == 'number' && this.image != ""){
-          await fetch("http://localhost:3004/products", {
+          await fetch("api/products", {
             method: "post",
             headers: {
               "Content-type": "application/json"
