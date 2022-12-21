@@ -48,7 +48,8 @@ export default {
           body: JSON.stringify({
             quantity: this.quantity,
             product_id: id,
-            price: finalResults.price
+            price: finalResults.price,
+            product_name: finalResults.name
           })
         }).then((response) => {
           if(response.ok){

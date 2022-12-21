@@ -27,16 +27,25 @@
   ],
   "cart": [
     {
-      "id": 1,
       "quantity": 1,
-      "product_id": 1,
-      "price": 1200
+      "product_id": 2,
+      "price": 250,
+      "product_name": "GoodProduct",
+      "id": 23
     },
     {
       "quantity": 1,
       "product_id": 4,
       "price": 69.99,
-      "id": 2
+      "product_name": "Call Of Duty MW2",
+      "id": 24
+    },
+    {
+      "quantity": 1,
+      "product_id": 4,
+      "price": 69.99,
+      "product_name": "Call Of Duty MW2",
+      "id": 26
     }
   ]
 }

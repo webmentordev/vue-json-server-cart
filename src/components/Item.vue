@@ -1,10 +1,13 @@
 <template>
     <div class="flex items-center justify-between">
-        <strong class="text-vue-green">${{item.price.toFixed(2) * quantity}}</strong>
+        <div class="py-2">
+            <h2 class="font-bold">{{item.product_name}}</h2>
+            <strong class="text-vue-green">${{(item.price.toFixed(2)) * item.quantity}}</strong>
+        </div>
         <Alert :message="message" :success="success" :failed="failed" />
         <div class="flex items-center">
             <button class="bg-gray-900 text-white p-1 px-3 rounded-md" @click="decement">-</button>
-            <span class="px-3">{{quantity}}</span>
+            <span class="px-3">{{item.quantity}}</span>
             <button class="bg-gray-900 text-white p-1 px-3 rounded-md" @click="increment">+</button>
             <button @click="removeItem(item.id)"><i class="fas fa-trash text-sm text-red-600 ml-3 p-2 px-3 rounded-full bg-gray-300"></i></button>
         </div>
@@ -20,7 +23,6 @@ export default {
     },
     data(){
         return {
-            quantity: 1,
             success: false,
             failed: false,
             message: ""
@@ -53,6 +55,9 @@ export default {
                     this.message = ""
                 }, 2000)
             }
+        },
+        removeItem(id){
+            this.$emit('deleteItem', id)
         }
     }
 }
