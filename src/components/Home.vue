@@ -49,7 +49,8 @@ export default {
             quantity: this.quantity,
             product_id: id,
             price: finalResults.price,
-            product_name: finalResults.name
+            product_name: finalResults.name,
+            total_price: finalResults.price
           })
         }).then((response) => {
           if(response.ok){

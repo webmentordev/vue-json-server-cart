@@ -3,7 +3,7 @@
     <h1 class="font-bold mb-3 text-2xl">Cart Page</h1>
     <div class="flex flex-col border-b border-gray-100">
       <div class="bg-gray-100 p-3 rounded-lg w-full mb-2" v-for="item in items" :key="item.id">
-        <Item :item="item" @deleteItem="deleteItem(item.id)" />
+        <Item :item="item" @reCalculate="reCalculate" @deleteItem="deleteItem(item.id)" />
       </div>
     </div>
     <h1 class="font-bold text-gray-600 my-2">Total Price: <span class="text-vue-green">$ {{total.toFixed(2)}}</span></h1>
@@ -40,9 +40,15 @@ export default {
           }
         });
       },
+      async reCalculate(){
+        await fetch(`api/cart/`).then((response) => response.json()).then(data => {
+          this.items = data;
+          this.totalCalculator();
+        });
+      },
       totalCalculator(){
           this.total = this.items.reduce((accumulator, item) => {
-          return accumulator + item.price;
+          return accumulator + item.total_price;
         }, 0);
       }
     }

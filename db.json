@@ -28,24 +28,27 @@
   "cart": [
     {
       "quantity": 1,
-      "product_id": 2,
-      "price": 250,
-      "product_name": "GoodProduct",
-      "id": 23
-    },
-    {
-      "quantity": 1,
       "product_id": 4,
-      "price": 69.99,
-      "product_name": "Call Of Duty MW2",
-      "id": 24
-    },
-    {
-      "quantity": 1,
-      "product_id": 4,
+      "total_price": 69.99,
       "price": 69.99,
       "product_name": "Call Of Duty MW2",
       "id": 26
+    },
+    {
+      "quantity": 3,
+      "product_id": 4,
+      "price": 69.99,
+      "product_name": "Call Of Duty MW2",
+      "total_price": 209.96999999999997,
+      "id": 27
+    },
+    {
+      "quantity": 2,
+      "product_id": 2,
+      "price": 250,
+      "product_name": "GoodProduct",
+      "total_price": 500,
+      "id": 28
     }
   ]
 }
